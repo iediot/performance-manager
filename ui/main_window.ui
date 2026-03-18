@@ -1,0 +1,32 @@
+<interface>
+    <object class="GtkWindow" id="main_window">
+        <property name="title">System Control</property>
+
+        <child>
+            <object class="GtkBox">
+                <property name="orientation">vertical</property>
+                <property name="spacing">10</property>
+
+                <child>
+                    <object class="GtkLabel">
+                        <property name="label">System Control</property>
+                    </object>
+                </child>
+
+                <child>
+                    <object class="GtkButton" id="performance_button">
+                        <property name="label">Performance</property>
+                    </object>
+                </child>
+
+                <child>
+                    <object class="GtkButton" id="balanced_button">
+                        <property name="label">Balanced</property>
+                    </object>
+                </child>
+
+            </object>
+        </child>
+
+    </object>
+</interface>
