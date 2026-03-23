@@ -1,32 +1,237 @@
 <interface>
     <object class="GtkWindow" id="main_window">
-        <property name="title">System Control</property>
+        <property name="title">Performance Manager</property>
+        <property name="default-width">800</property>
+        <property name="default-height">500</property>
 
         <child>
-            <object class="GtkBox">
-                <property name="orientation">vertical</property>
-                <property name="spacing">10</property>
-
+            <object class="GtkScrolledWindow">
                 <child>
-                    <object class="GtkLabel">
-                        <property name="label">System Control</property>
+                    <object class="GtkBox">
+                        <property name="orientation">vertical</property>
+                        <property name="spacing">20</property>
+
+                        <property name="margin-top">20</property>
+                        <property name="margin-bottom">20</property>
+                        <property name="margin-start">20</property>
+                        <property name="margin-end">20</property>
+
+                        <!-- TITLE -->
+                        <child>
+                            <object class="GtkLabel">
+                                <property name="label">Performance Manager</property>
+                                <attributes>
+                                    <attribute name="scale" value="1.5"/>
+                                    <attribute name="weight" value="bold"/>
+                                </attributes>
+                            </object>
+                        </child>
+
+                        <!-- PRESETS -->
+                        <child>
+                            <object class="GtkFrame">
+                                <property name="label">Performance Presets</property>
+
+                                <child>
+                                    <object class="GtkBox">
+                                        <property name="orientation">horizontal</property>
+                                        <property name="spacing">10</property>
+                                        <property name="margin-top">10</property>
+                                        <property name="margin-bottom">10</property>
+                                        <property name="margin-start">10</property>
+                                        <property name="margin-end">10</property>
+
+                                        <child>
+                                            <object class="GtkToggleButton" id="power_saving_button">
+                                                <property name="label">Power Saving</property>
+                                                <property name="hexpand">true</property>
+                                            </object>
+                                        </child>
+
+                                        <child>
+                                            <object class="GtkToggleButton" id="balanced_button">
+                                                <property name="label">Balanced</property>
+                                                <property name="hexpand">true</property>
+                                            </object>
+                                        </child>
+
+                                        <child>
+                                            <object class="GtkToggleButton" id="performance_button">
+                                                <property name="label">Performance</property>
+                                                <property name="hexpand">true</property>
+                                            </object>
+                                        </child>
+
+                                    </object>
+                                </child>
+                            </object>
+                        </child>
+
+                        <!-- ASUS / HARDWARE -->
+                        <child>
+                            <object class="GtkFrame">
+                                <property name="label">Asus Settings</property>
+
+                                <child>
+                                    <object class="GtkBox">
+                                        <property name="orientation">vertical</property>
+                                        <property name="spacing">15</property>
+                                        <property name="margin-top">10</property>
+                                        <property name="margin-bottom">10</property>
+                                        <property name="margin-start">10</property>
+                                        <property name="margin-end">10</property>
+
+                                        <!-- GPU -->
+                                        <child>
+                                            <object class="GtkLabel">
+                                                <property name="label">Video Card</property>
+                                                <property name="halign">start</property>
+                                            </object>
+                                        </child>
+
+                                        <child>
+                                            <object class="GtkBox">
+                                                <property name="orientation">horizontal</property>
+                                                <property name="spacing">10</property>
+
+                                                <child>
+                                                    <object class="GtkToggleButton" id="integrated_button">
+                                                        <property name="label">Integrated</property>
+                                                        <property name="hexpand">true</property>
+                                                    </object>
+                                                </child>
+
+                                                <child>
+                                                    <object class="GtkToggleButton" id="both_button">
+                                                        <property name="label">Hybrid</property>
+                                                        <property name="hexpand">true</property>
+                                                    </object>
+                                                </child>
+
+                                                <child>
+                                                    <object class="GtkToggleButton" id="dedicated_button">
+                                                        <property name="label">Dedicated</property>
+                                                        <property name="hexpand">true</property>
+                                                    </object>
+                                                </child>
+
+                                            </object>
+                                        </child>
+
+                                        <!-- FAN -->
+                                        <child>
+                                            <object class="GtkLabel">
+                                                <property name="label">Fan</property>
+                                                <property name="halign">start</property>
+                                            </object>
+                                        </child>
+
+                                        <child>
+                                            <object class="GtkBox">
+                                                <property name="orientation">horizontal</property>
+                                                <property name="spacing">10</property>
+
+                                                <child>
+                                                    <object class="GtkToggleButton" id="quiet_fan_button">
+                                                        <property name="label">Quiet</property>
+                                                        <property name="hexpand">true</property>
+                                                    </object>
+                                                </child>
+
+                                                <child>
+                                                    <object class="GtkToggleButton" id="balanced_fan_button">
+                                                        <property name="label">Balanced</property>
+                                                        <property name="hexpand">true</property>
+                                                    </object>
+                                                </child>
+
+                                                <child>
+                                                    <object class="GtkToggleButton" id="performance_fan_button">
+                                                        <property name="label">Performance</property>
+                                                        <property name="hexpand">true</property>
+                                                    </object>
+                                                </child>
+
+                                            </object>
+                                        </child>
+
+                                    </object>
+                                </child>
+                            </object>
+                        </child>
+
+                        <!-- CPU -->
+                        <child>
+                            <object class="GtkFrame">
+                                <property name="label">CPU</property>
+
+                                <child>
+                                    <object class="GtkBox">
+                                        <property name="orientation">horizontal</property>
+                                        <property name="spacing">10</property>
+                                        <property name="margin-top">10</property>
+                                        <property name="margin-bottom">10</property>
+                                        <property name="margin-start">10</property>
+                                        <property name="margin-end">10</property>
+
+                                        <child>
+                                            <object class="GtkToggleButton" id="power_save_cpu_button">
+                                                <property name="label">Power Save</property>
+                                                <property name="hexpand">true</property>
+                                            </object>
+                                        </child>
+
+                                        <child>
+                                            <object class="GtkToggleButton" id="balanced_cpu_button">
+                                                <property name="label">Balanced</property>
+                                                <property name="hexpand">true</property>
+                                            </object>
+                                        </child>
+
+                                        <child>
+                                            <object class="GtkToggleButton" id="performance_cpu_button">
+                                                <property name="label">Performance</property>
+                                                <property name="hexpand">true</property>
+                                            </object>
+                                        </child>
+
+                                    </object>
+                                </child>
+                            </object>
+                        </child>
+
+                        <!-- DISPLAY -->
+                        <child>
+                            <object class="GtkFrame">
+                                <property name="label">Display</property>
+
+                                <child>
+                                    <object class="GtkBox">
+                                        <property name="orientation">horizontal</property>
+                                        <property name="spacing">10</property>
+                                        <property name="margin-top">10</property>
+                                        <property name="margin-bottom">10</property>
+                                        <property name="margin-start">10</property>
+                                        <property name="margin-end">10</property>
+
+                                        <child>
+                                            <object class="GtkLabel">
+                                                <property name="label">Refresh Rate</property>
+                                            </object>
+                                        </child>
+
+                                        <child>
+                                            <object class="GtkComboBoxText" id="refresh_rate_dropdown"/>
+                                        </child>
+
+                                    </object>
+                                </child>
+                            </object>
+                        </child>
+
                     </object>
                 </child>
-
-                <child>
-                    <object class="GtkButton" id="performance_button">
-                        <property name="label">Performance</property>
-                    </object>
-                </child>
-
-                <child>
-                    <object class="GtkButton" id="balanced_button">
-                        <property name="label">Balanced</property>
-                    </object>
-                </child>
-
             </object>
         </child>
-
     </object>
 </interface>
