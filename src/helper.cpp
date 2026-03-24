@@ -36,7 +36,7 @@ int main(int argc, char** argv)
     else if (gpu == "hybrid")
         system("/usr/bin/supergfxctl -m Hybrid");
     else if (gpu == "dedicated")
-        system("/usr/bin/supergfxctl -m Dedicated");
+        system("/usr/bin/supergfxctl -m AsusMuxDgpu");
 
     /* FAN */
     if (fan == "quiet")
