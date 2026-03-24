@@ -16,7 +16,6 @@
                         <property name="margin-start">20</property>
                         <property name="margin-end">20</property>
 
-                        <!-- TITLE -->
                         <child>
                             <object class="GtkLabel">
                                 <property name="label">Performance Manager</property>
@@ -27,10 +26,18 @@
                             </object>
                         </child>
 
-                        <!-- PRESETS -->
                         <child>
                             <object class="GtkFrame">
-                                <property name="label">Performance Presets</property>
+                                <property name="label-widget">
+                                    <object class="GtkLabel">
+                                        <property name="label">     Performance Presets</property>
+                                        <property name="margin-top">10</property>
+                                        <attributes>
+                                            <attribute name="weight" value="bold"/>
+                                            <attribute name="scale" value="1.3"/>
+                                        </attributes>
+                                    </object>
+                                </property>
 
                                 <child>
                                     <object class="GtkBox">
@@ -67,10 +74,18 @@
                             </object>
                         </child>
 
-                        <!-- ASUS / HARDWARE -->
                         <child>
                             <object class="GtkFrame">
-                                <property name="label">Asus Settings</property>
+                                <property name="label-widget">
+                                    <object class="GtkLabel">
+                                        <property name="label">     Asus Settings</property>
+                                        <property name="margin-top">10</property>
+                                        <attributes>
+                                            <attribute name="weight" value="bold"/>
+                                            <attribute name="scale" value="1.3"/>
+                                        </attributes>
+                                    </object>
+                                </property>
 
                                 <child>
                                     <object class="GtkBox">
@@ -81,7 +96,6 @@
                                         <property name="margin-start">10</property>
                                         <property name="margin-end">10</property>
 
-                                        <!-- GPU -->
                                         <child>
                                             <object class="GtkLabel">
                                                 <property name="label">Video Card</property>
@@ -118,7 +132,6 @@
                                             </object>
                                         </child>
 
-                                        <!-- FAN -->
                                         <child>
                                             <object class="GtkLabel">
                                                 <property name="label">Fan</property>
@@ -160,10 +173,18 @@
                             </object>
                         </child>
 
-                        <!-- CPU -->
                         <child>
                             <object class="GtkFrame">
-                                <property name="label">CPU</property>
+                                <property name="label-widget">
+                                    <object class="GtkLabel">
+                                        <property name="label">     CPU</property>
+                                        <property name="margin-top">10</property>
+                                        <attributes>
+                                            <attribute name="weight" value="bold"/>
+                                            <attribute name="scale" value="1.3"/>
+                                        </attributes>
+                                    </object>
+                                </property>
 
                                 <child>
                                     <object class="GtkBox">
@@ -200,10 +221,18 @@
                             </object>
                         </child>
 
-                        <!-- DISPLAY -->
                         <child>
                             <object class="GtkFrame">
-                                <property name="label">Display</property>
+                                <property name="label-widget">
+                                    <object class="GtkLabel">
+                                        <property name="label">     Display</property>
+                                        <property name="margin-top">10</property>
+                                        <attributes>
+                                            <attribute name="weight" value="bold"/>
+                                            <attribute name="scale" value="1.3"/>
+                                        </attributes>
+                                    </object>
+                                </property>
 
                                 <child>
                                     <object class="GtkBox">
@@ -226,6 +255,26 @@
 
                                     </object>
                                 </child>
+                            </object>
+                        </child>
+
+                        <child>
+                            <object class="GtkBox">
+                                <property name="orientation">horizontal</property>
+
+                                <child>
+                                    <object class="GtkBox">
+                                        <property name="hexpand">true</property>
+                                    </object>
+                                </child>
+
+                                <child>
+                                    <object class="GtkButton" id="apply_button">
+                                        <property name="label">Apply</property>
+                                        <property name="margin-top">10</property>
+                                    </object>
+                                </child>
+
                             </object>
                         </child>
 
