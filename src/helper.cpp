@@ -40,11 +40,23 @@ int main(int argc, char** argv)
 
     /* FAN */
     if (fan == "quiet")
+    {
         system("/usr/bin/asusctl profile -P quiet");
+        system("/usr/bin/asusctl profile -a quiet");
+        system("/usr/bin/asusctl profile -b quiet");
+    }
     else if (fan == "balanced")
+    {
         system("/usr/bin/asusctl profile -P balanced");
+        system("/usr/bin/asusctl profile -a balanced");
+        system("/usr/bin/asusctl profile -b balanced");
+    }
     else if (fan == "performance")
+    {
         system("/usr/bin/asusctl profile -P performance");
+        system("/usr/bin/asusctl profile -a performance");
+        system("/usr/bin/asusctl profile -b performance");
+    }
 
     return 0;
 }

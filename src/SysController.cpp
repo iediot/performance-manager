@@ -18,8 +18,6 @@ void apply_all(const std::string& cpu,
     if (!gpu.empty()) cmd += " gpu=" + gpu;
     if (!fan.empty()) cmd += " fan=" + fan;
 
-    std::cout << "CMD: " << cmd << std::endl;
-
     system(cmd.c_str());
 }
 
