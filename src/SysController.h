@@ -14,4 +14,6 @@ void apply_all(const std::string& cpu,
 
 void apply_preset(const std::string& preset);
 
+void reboot_system();
+
 #endif //GTKAPP_SYSCONTROLLER_H

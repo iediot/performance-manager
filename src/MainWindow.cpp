@@ -221,8 +221,15 @@ void create_main_window(GtkApplication* app)
 
         apply_all(cpu, gpu, fan);
     }
-
-    g_print("Applied settings\n");
-
     }), builder);
+
+    GtkButton* restart_btn = GTK_BUTTON(
+    gtk_builder_get_object(builder, "restart_button")
+);
+
+    g_signal_connect(restart_btn, "clicked",
+        G_CALLBACK(+[](GtkButton*, gpointer) {
+            reboot_system();
+        }),
+        NULL);
 }

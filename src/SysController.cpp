@@ -35,3 +35,8 @@ void apply_preset(const std::string& preset)
         apply_all("performance", "dedicated", "performance");
     }
 }
+
+void reboot_system()
+{
+    system("pkexec /usr/local/bin/perf-helper reboot");
+}

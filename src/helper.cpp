@@ -9,10 +9,14 @@
 int main(int argc, char** argv)
 {
     std::string cpu, gpu, fan;
-    int hz = 0;
 
     for (int i = 1; i < argc; i++) {
         std::string arg = argv[i];
+
+        if (arg == "reboot") {
+            system("/usr/bin/systemctl reboot");
+            return 0;
+        }
 
         if (arg.find("cpu=") == 0)
             cpu = arg.substr(4);

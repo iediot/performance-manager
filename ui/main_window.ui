@@ -269,6 +269,14 @@
                                 </child>
 
                                 <child>
+                                    <object class="GtkButton" id="restart_button">
+                                        <property name="label">Restart</property>
+                                        <property name="margin-end">10</property>
+                                        <property name="margin-top">10</property>
+                                    </object>
+                                </child>
+
+                                <child>
                                     <object class="GtkButton" id="apply_button">
                                         <property name="label">Apply</property>
                                         <property name="margin-top">10</property>
