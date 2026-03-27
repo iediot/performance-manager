@@ -1,7 +1,7 @@
 <h1 align="center">Performance Manager</h1>
 
 <p align="center">
-A lightweight GTK-based tool for managing CPU, GPU, fan profiles, and display refresh rate on Linux systems — designed for ASUS laptops and Hyprland users.
+A lightweight GTK-based tool for managing CPU, GPU, fan profiles, and display refresh rate on Linux systems designed for ASUS laptops and Hyprland users.
 </p>
 
 <p align="center">
