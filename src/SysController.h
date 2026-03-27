@@ -10,7 +10,8 @@
 
 void apply_all(const std::string& cpu,
                const std::string& gpu,
-               const std::string& fan);
+               const std::string& fan,
+               int hz);
 
 void apply_preset(const std::string& preset);
 

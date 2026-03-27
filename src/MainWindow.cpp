@@ -62,6 +62,26 @@ std::string get_fan_mode(GtkBuilder* builder)
     return "";
 }
 
+int get_refresh_rate(GtkBuilder* builder)
+{
+    GtkComboBoxText* dropdown = GTK_COMBO_BOX_TEXT(
+        gtk_builder_get_object(builder, "refresh_rate_dropdown")
+    );
+
+    const char* text = gtk_combo_box_text_get_active_text(dropdown);
+
+    if (!text) return 0;
+
+    std::string str = text;
+
+    if (str == "60 Hz") return 60;
+    if (str == "120 Hz") return 120;
+    if (str == "144 Hz") return 144;
+    if (str == "240 Hz") return 240;
+
+    return 0;
+}
+
 /* HELPERS */
 
 void handle_toggle_group(GtkToggleButton* active, std::vector<GtkToggleButton*>* group)
@@ -210,6 +230,7 @@ void create_main_window(GtkApplication* app)
         GtkBuilder* builder = static_cast<GtkBuilder*>(data);
 
     auto preset = get_preset(builder);
+    auto hz = get_refresh_rate(builder);
 
     if (!preset.empty()) {
         apply_preset(preset);
@@ -219,7 +240,7 @@ void create_main_window(GtkApplication* app)
         auto gpu = get_gpu_mode(builder);
         auto fan = get_fan_mode(builder);
 
-        apply_all(cpu, gpu, fan);
+        apply_all(cpu, gpu, fan, hz);;
     }
     }), builder);
 
