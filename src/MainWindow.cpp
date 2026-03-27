@@ -7,6 +7,7 @@
 #include <tuple>
 #include "SysController.h"
 #include <string>
+#include <cstdlib>
 
 /* GETTERS */
 
@@ -138,7 +139,12 @@ static void on_manual_clears_presets(GtkToggleButton* btn, gpointer data)
 
 void create_main_window(GtkApplication* app)
 {
-    GtkBuilder* builder = gtk_builder_new_from_file("../ui/main_window.ui");
+    const char* home = getenv("HOME");
+
+    std::string path = std::string(home) +
+        "/.local/share/performance-manager/main_window.ui";
+
+    GtkBuilder* builder = gtk_builder_new_from_file(path.c_str());
 
     GtkWidget* window = GTK_WIDGET(
         gtk_builder_get_object(builder, "main_window")
