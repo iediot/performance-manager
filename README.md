@@ -7,7 +7,7 @@ A lightweight GTK-based tool for managing CPU, GPU, fan profiles, and display re
 <p align="center">
   <img src="https://img.shields.io/badge/Linux-grey?logo=linux&logoColor=white">
   <img src="https://img.shields.io/badge/C++-blue?logo=c%2B%2B&logoColor=white">
-  <img src="https://img.shields.io/badge/GTK-4-green?logo=gnome&logoColor=green">
+  <img src="https://img.shields.io/badge/GTK-4-green?logo=green&logoColor=white">
   <img src="https://img.shields.io/badge/Hyprland-purple">
 </p>
 
